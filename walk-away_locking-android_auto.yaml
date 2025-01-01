@@ -4,7 +4,7 @@ triggers:
   - alias: Phone - Disconnected
     trigger: state
     entity_id:
-      - binary_sensor.mobilephone_android_auto
+      - binary_sensor.[PHONE_CONNECTED_SENSOR]
     from: "on"
     to: "off"
     for:
@@ -13,7 +13,7 @@ triggers:
       seconds: 0
 conditions:
   - condition: state
-    entity_id: sensor.mobilephone_wifi_bssid
+    entity_id: sensor.[PHONE_WIFI_BSSID_SENSOR]
     state: [CAR MAC ADDRESS]
     alias: Car BSSID
 actions:
@@ -21,7 +21,7 @@ actions:
     wait_for_trigger:
       - alias: Phone - Away
         entity_id:
-          - sensor.mobilephone_wifi_bssid
+          - sensor.[PHONE_WIFI_BSSID_SENSOR]
         from: [CAR MAC ADDRESS]
         trigger: state
     timeout:
