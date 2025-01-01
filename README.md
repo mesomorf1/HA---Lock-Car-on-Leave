@@ -1,36 +1,33 @@
-Created this automation in Home assistant for my Kia EV9 that don´t support walk-away locking.
+Automation for Walk-Away Locking in Home Assistant (Kia EV9)
 
----
+This automation is designed for the Kia EV9, which does not natively support walk-away locking. However, it can also work with other cars that meet the following requirements:
+Requirements:
 
-Will work for all other cars that support:
-* Intergration in Home Assistant
-* Remote locking
-* Android Auto / Car Play
+    Integration in Home Assistant
+    Remote Locking Support
+    Android Auto / CarPlay Compatibility
 
----
+Placeholder Guide
 
-I have put brackets [] where you need to enter your own details like:
+You will need to replace the placeholders (marked with [ ]) in the automation with your specific details:
 
-[PHONE_CONNECTED_SENSOR]
-Info: Your entity for Android Auto / Car Play
+    [PHONE_CONNECTED_SENSOR]
+        Description: Your entity for Android Auto or CarPlay connection.
+        Example: binary_sensor.your_phone_android_auto.
 
+    [PHONE_WIFI_BSSID_SENSOR]
+        Description: The entity for your phone's WiFi sensor.
+        Example: sensor.your_phone_wifi_bssid.
 
-[PHONE_WIFI_BSSID_SENSOR]
-Info: Your entity for the phones wifi sensor
+    [CAR MAC ADDRESS]
+        Description: Your car's WiFi (ad-hoc) MAC address.
+        Details: You can find this in Home Assistant as a sensor, representing the network your phone connects to while in the car.
+        Format: xx:xx:xx:xx:xx:xx.
 
+    [LOCK_DEVICE_ID]
+        Description: The ID of your car in Home Assistant.
+        Example: a71b9e22db3917477a6837c7a06d90bb.
 
-[CAR MAC ADDRESS]
-Info: This is you cars wifi (ad-hoc) adress. You will find it in Home Assistant as a sensor (the network your phone is connected to). Format is: xx:xx:xx:xx:xx:xx
-
-
-[LOCK_DEVICE_ID]
-Info: The ID of your car in Home assistant
-
-[CAR_DOOR_LOCK_ENTITY]
-Info: The ID for the "Lock" command of your car
-
-
----
-
-WARNING!
-Try this at home first, I can not guarantee it will work flawless for you as it does for me (only tested on Samsung phone).
+    [CAR_DOOR_LOCK_ENTITY]
+        Description: The entity ID for the "Lock" command of your car.
+        Example: lock.car_door_lock.
