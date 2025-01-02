@@ -11,12 +11,12 @@ Requirements:
 
 How does it work?
 -
-When Android Auto / CarPlay disconnects, the automation begins monitoring the Wi-Fi connection between your phone and the car. As you walk away from your car, your phone will lose the Wi-Fi signal, triggering the automation to lock the doors.
+When Android Auto / CarPlay disconnects, the automation begins monitoring the WiFi connection between your phone and the car. As you walk away from your car, your phone will lose the WiFi signal, triggering the automation to lock the doors.
 
 
 The Logic
 -
-When the car is completely turned off, the Wi-Fi connection between your phone and the car remains active for approximately 6 minutes and 55 seconds. This time frame is crucial as it defines the maximum duration for the automation to run.
+When the car is completely turned off, the WiFi connection between your phone and the car remains active for approximately 6 minutes and 55 seconds. This time frame is crucial as it defines the maximum duration for the automation to run.
 
 The automation uses a 5-minute wait time by default. You can adjust this value, but it must not exceed 6:55 minutes. A longer duration may risk locking the car even if your phone is still inside.
 
@@ -40,7 +40,7 @@ A: The car will not lock because the automation requires an "away" signal from y
 
 Q: Can I set the wait time above 6:55 minutes?
 
-A: No, 6:55 minutes is the maximum time the car's Wi-Fi remains active after shutting down. This value was tested on my setup and may vary slightly with different configurations.
+A: No, 6:55 minutes is the maximum time the car's WiFi remains active after shutting down. This value was tested on my setup and may vary slightly with different configurations.
 
 ---
 
