@@ -10,32 +10,37 @@ Requirements:
 
 How does it work?
 -
-
-When Android Auto / CarPlay gets disconnected the automation will start waiting for the wifi connection with the car to end. So when you start walkning away from your car your phone will start loosing signal with the car and when it does it will lock the doors.
-
+When Android Auto / CarPlay disconnects, the automation begins monitoring the Wi-Fi connection between your phone and the car. As you walk away from your car, your phone will lose the Wi-Fi signal, triggering the automation to lock the doors.
 
 
-The Logic:
+The Logic
 -
-When car is 100% turned off the wifi connection between your mobile and the car is STILL ALIVE!
-I have measured it to be alive for a 6 minutes and 55 seconds.
-That number is important because that will be the maximum time for the automation to live.
-I have set 5 minutes as a "wait time" and you can adjust it lower or higher, but do not exeed 6:55 minutes since that will allow your car to lock itself even if your phone is in the car.
+When the car is completely turned off, the Wi-Fi connection between your phone and the car remains active for approximately 6 minutes and 55 seconds. This time frame is crucial as it defines the maximum duration for the automation to run.
 
-So:
-As standard the automation waits up to 5 minutes for you to get away from your car so it can lock the car for you. As soon it can't detect your phone it will lock.
-If it sense your phone the whole 5 minutes (perhaps your phone is left in the car or you are right next to it) then it will abort to automation and NOT lock the car.
+The automation uses a 5-minute wait time by default. You can adjust this value, but it must not exceed 6:55 minutes. A longer duration may risk locking the car even if your phone is still inside.
+
+Behavior:
+-
+Standard Operation:
+The automation waits up to 5 minutes for your phone to move out of range. As soon as your phone is undetectable, the car locks.
+Abort Scenario:
+If your phone remains connected during the entire wait period (e.g., you left it in the car or stayed close by), the automation cancels itself and does not lock the car.
 
 
 FAQ:
 -
 
-Q: If phone runs out of battery or if I turn off the phone, will it make the car to lock? 
-A: No, since it is required that the phone sends an "away" signal to Home Assistant this will not happen and the automation will abort
+Q: What happens if my phone runs out of battery or I turn it off?
+
+A: The car will not lock because the automation requires an "away" signal from your phone. If no signal is sent, the automation aborts.
+
+---
 
 Q: Can I set the wait time above 6:55 minutes?
-A: No, that is the max time that wifi is alive after you shutdown your car. Sidenote: I have only used this on my own phone so i can not say this for 100%
 
+A: No, 6:55 minutes is the maximum time the car's Wi-Fi remains active after shutting down. This value was tested on my setup and may vary slightly with different configurations.
+
+---
 
 The Setup:
 -
