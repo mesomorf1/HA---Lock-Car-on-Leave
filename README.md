@@ -48,7 +48,7 @@ The Setup:
 -
 * You need the Home Assistent app in your phone
 * You need to turn on the sensor for Android Auto / CarPlay in System -> App -> Manage Sensors
-* Create the automation using the YAML code in this project
+* Create the automation using [this](https://github.com/mesomorf1/Walk-Away-Locking/blob/main/walk-away_locking.yaml) YAML code
 * Edit the placeholders (see instructions below)
 
 
