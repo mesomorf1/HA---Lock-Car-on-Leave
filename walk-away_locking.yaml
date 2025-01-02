@@ -17,7 +17,7 @@ conditions:
     state: [CAR MAC ADDRESS]
     alias: Car BSSID
 actions:
-  - alias: Wait for away (max 6:45 minutes)
+  - alias: Wait for away (max 6:55 minutes)
     wait_for_trigger:
       - alias: Phone - Away
         entity_id:
