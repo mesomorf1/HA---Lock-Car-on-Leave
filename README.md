@@ -80,6 +80,7 @@ You will need to replace the placeholders (marked with [ ]) in the automation wi
 Warning
 -
 ⚠️ Test Before Using
+
 This automation should be tested at home or in a safe environment before relying on it. While it works flawlessly for me (tested only on a Samsung phone), I cannot guarantee the same results for other setups.
 
 Let me know if you'd like any additional adjustments or clarifications! 😊
