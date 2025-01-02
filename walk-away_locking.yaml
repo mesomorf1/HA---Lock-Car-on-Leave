@@ -1,4 +1,4 @@
-alias: Lock Car on Away
+alias: Walk-Away Locking
 description: ""
 triggers:
   - alias: Phone - Disconnected
