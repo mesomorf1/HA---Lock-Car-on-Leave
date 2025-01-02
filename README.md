@@ -3,9 +3,9 @@ Automation for Walk-Away Locking in Home Assistant
 This automation is designed for the Kia EV9, which does not natively support walk-away locking. However, it can also work with other cars that meet the following requirements:
 Requirements:
 
-* Integration in Home Assistant
-* Remote Locking Support
-* Android Auto / CarPlay Compatibility
+* Car integration in Home Assistant
+* Remote locking supported
+* Android Auto / CarPlay compatibility
 
 
 How does it work?
