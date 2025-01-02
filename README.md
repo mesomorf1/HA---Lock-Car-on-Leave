@@ -23,6 +23,7 @@ Behavior:
 -
 Standard Operation:
 The automation waits up to 5 minutes for your phone to move out of range. As soon as your phone is undetectable, the car locks.
+
 Abort Scenario:
 If your phone remains connected during the entire wait period (e.g., you left it in the car or stayed close by), the automation cancels itself and does not lock the car.
 
